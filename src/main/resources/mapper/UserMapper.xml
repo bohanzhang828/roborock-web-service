@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.roborock.springboot.server.mapper.UserMapper">
+
+    <select id="getList" resultType="User">
+		select * from user_test
+	</select>
+
+    <select id="getById" parameterType="String" resultType="User">
+		select * from user_test where  id=#{id}
+	</select>
+
+    <insert id="insert" parameterType="User">
+		insert into
+		user_test(id,name,age) values(#{id},#{name},#{age})
+	</insert>
+
+    <update id="update" parameterType="User">
+		update user_test set
+		age=#{age},name=#{name} where id=#{id}
+	</update>
+
+    <delete id="delete" parameterType="String">
+		delete from user_test
+		where id=#{id}
+	</delete>
+</mapper>
