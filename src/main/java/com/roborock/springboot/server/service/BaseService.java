@@ -1,8 +1,6 @@
 package com.roborock.springboot.server.service;
 
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.roborock.springboot.server.bean.BaseEntity;
+import com.roborock.springboot.server.common.domain.BaseEntity;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;
 
@@ -55,21 +53,6 @@ public abstract class BaseService<T extends BaseEntity> {
      */
     public List<T> queryListByWhere(T record) {
         return mapper.select(record);
-    }
-
-    /**
-     * 分页查询
-     *
-     * @param page
-     * @param rows
-     * @param record
-     * @return
-     */
-    public PageInfo<T> queryPageListByWhere(Integer page, Integer rows, T record) {
-        // 设置分页条件
-        PageHelper.startPage(page, rows);
-        List<T> list = this.queryListByWhere(record);
-        return new PageInfo<T>(list);
     }
 
     /**

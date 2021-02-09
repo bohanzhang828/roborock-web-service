@@ -1,5 +1,6 @@
-package com.roborock.springboot.server.bean;
+package com.roborock.springboot.server.domain;
 
+import com.roborock.springboot.server.common.domain.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Id;

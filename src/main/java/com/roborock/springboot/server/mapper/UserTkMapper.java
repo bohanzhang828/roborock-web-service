@@ -1,6 +1,6 @@
 package com.roborock.springboot.server.mapper;
 
-import com.roborock.springboot.server.bean.UserTest;
+import com.roborock.springboot.server.domain.UserTest;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface UserTkMapper extends Mapper<UserTest> {
