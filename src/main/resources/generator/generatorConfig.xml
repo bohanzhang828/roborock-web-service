@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <classPathEntry location="D:/Tool/repository/org/postgresql/postgresql/42.2.5/postgresql-42.2.5.jar" />
+    <context id="generate" targetRuntime="MyBatis3" >
+        <!--连接数据库-->
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://127.0.0.1:5432/pgtest"
+                        userId="postgres"
+                        password="root">
+        </jdbcConnection>
+
+        <!--生成实体类，targetPackage是包名，targetProject是生成的包在工程中的哪个文件夹下-->
+        <javaModelGenerator targetPackage="com.roborock.springboot.service.domain" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--生成.xml文件-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources/">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <!--生成dao层接口-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.roborock.springboot.service.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <!--数据库表名配置,tablename是数据库的表名，domainObjectName是生成实体类的类名-->
+        <table tableName="sys_permission" domainObjectName="SysPermission"
+               enableCountByExample="true"
+               enableUpdateByExample="true"
+               enableDeleteByExample="true"
+               enableSelectByExample="true"
+               selectByExampleQueryId="true" >
+        </table>
+
+    </context>
+</generatorConfiguration>
