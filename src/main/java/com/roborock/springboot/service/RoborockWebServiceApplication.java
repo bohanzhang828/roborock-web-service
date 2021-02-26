@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@NacosPropertySource(dataId = "roborock-web-service", autoRefreshed = true)
+//@NacosPropertySource(dataId = "roborock-web-service", autoRefreshed = true)
 @MapperScan(basePackages = "com.roborock.springboot.service.mapper")
 public class RoborockWebServiceApplication {
 

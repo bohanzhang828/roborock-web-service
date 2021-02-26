@@ -61,7 +61,7 @@ public class SysUser extends BaseEntity {
      *
      * @mbg.generated Thu Feb 18 10:20:03 CST 2021
      */
-    private boolean enabled;
+    private Boolean enabled;
 
     /**
      *
@@ -70,6 +70,6 @@ public class SysUser extends BaseEntity {
      *
      * @mbg.generated Thu Feb 18 10:20:03 CST 2021
      */
-    private boolean accountNonLocked;
+    private Boolean accountNonLocked;
 
 }

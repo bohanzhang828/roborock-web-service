@@ -31,6 +31,7 @@ public class CustomizePermissionEvaluator implements PermissionEvaluator {
             return false;
         }
         LoginUser loginUser = jwtUtil.getLoginUser(ServletUtils.getRequest());
+        //LoginUser loginUser = (LoginUser) authentication.getPrincipal();
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getPermissions())) {
             return false;
         }
