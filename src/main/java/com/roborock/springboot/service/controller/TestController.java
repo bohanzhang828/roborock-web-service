@@ -11,9 +11,12 @@ import com.roborock.springboot.service.domain.vo.SysUserVo;
 import com.roborock.springboot.service.domain.vo.UserTestVo;
 import com.roborock.springboot.service.service.SysUserService;
 import com.roborock.springboot.service.service.UserTkService;
+import com.roborock.springboot.service.util.DateUtils;
 import com.roborock.springboot.service.util.ServletUtils;
 import com.roborock.springboot.service.util.jwt.JwtUtil;
 import com.roborock.springboot.service.util.poi.ExcelUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +28,8 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/roborock/user")
 public class TestController extends BaseController {
+
+    private static final Logger log = LoggerFactory.getLogger(TestController.class);
 
     @Resource
     private TestConfig config;
@@ -41,6 +46,7 @@ public class TestController extends BaseController {
     @PreAuthorize("hasPermission('/roborock/user/getUser','sys:user:list')")
     @GetMapping(value = "/getUser")
     public AjaxResult getAll() {
+        log.info("日志测试:{}",DateUtils.getTime());
         return AjaxResult.success(sysUserService.queryAll());
     }
 
