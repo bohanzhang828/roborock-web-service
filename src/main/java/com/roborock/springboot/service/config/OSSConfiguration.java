@@ -1,23 +1,23 @@
 package com.roborock.springboot.service.config;
 
-import com.aliyun.oss.OSS;
+/*import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Component;*/
 
 /**
  * @Author BoHanZhang
  * @Date Create in 2021/2/22 16:15
  * @Description oss配置类
  */
-@Configuration
-@Component
+//@Configuration
+//@Component
 public class OSSConfiguration {
 
-    private volatile static OSS ossClient;
+   /* private volatile static OSS ossClient;
 
     private volatile static OSSClientBuilder ossClientBuilder;
 
@@ -71,5 +71,5 @@ public class OSSConfiguration {
             }
         }
         return ossClientBuilder;
-    }
+    }*/
 }

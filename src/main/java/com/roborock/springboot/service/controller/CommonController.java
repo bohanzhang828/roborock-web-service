@@ -25,7 +25,7 @@ public class CommonController {
 
     private static final Logger log = LoggerFactory.getLogger(CommonController.class);
 
-    @Autowired
+    /*@Autowired
     private AlibabaOssService service;
 
     @PostMapping(value = "/upload")
@@ -46,6 +46,6 @@ public class CommonController {
         } catch (Exception e) {
             log.error("下载文件失败", e);
         }
-    }
+    }*/
 
 }
